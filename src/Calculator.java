@@ -16,8 +16,15 @@ public class Calculator {
 		if (a<b) {
 			result = a * b;
 		}else {
-			result = a/b;
+			try {
+				result = a/b;
+			} catch (ArithmeticException e) {
+				System.out.print("error: Division by zero");
+			}
+			
 		}
+		System.out.print("Result: ");
+		System.out.println(result);
 		return result;
 	}
 
